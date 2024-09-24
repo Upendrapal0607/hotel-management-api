@@ -1,0 +1,36 @@
+{
+    "mongo_instances": {
+        "primary_1": {
+            "connect": false,
+            "db": "ecommerce",
+            "host": "127.0.0.1",
+            "port":"27017",
+            "user": "Upendra Pal",
+            "pass": "1234",
+            "options": "" 
+        }
+    },
+    "redis_instances": {
+        "redis_1": {
+            "connect": false,
+			"host": "",
+			"user": "",
+			"pass": "",
+			"db": "",
+			"timeout": 2000,
+			"port": 6379
+        }
+    },
+    "memcache_instances": {
+        "redis_1": {
+            "connect": false,
+			"host": "",
+			"port": "",
+			"db": "",
+			"timeout": 2000
+        }
+    },
+    "application": {
+        "port": 1111
+    }
+}
