@@ -1,4 +1,4 @@
 module.exports = {
-    adminSchema : require("./schema"),
+    schema : require("./schema"),
     constants : require("./constants")
 }

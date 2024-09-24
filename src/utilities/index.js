@@ -1,5 +1,6 @@
 
 module.exports = {
     DBClient : require("./client"),
-    Registry : require("./registory")
+    Registry : require("./registory"),
+    varriable : require("./varriable")
 }
