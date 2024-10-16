@@ -1,1 +1,0 @@
-//"?authSource=ecommerce&authMechanism=SCRAM-SHA-256"

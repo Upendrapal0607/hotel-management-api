@@ -29,6 +29,12 @@
       "timeout": 2000
     }
   },
+  "Cloudenary_instance" :{
+    "connect": false,
+    "cloud_name": "",
+    "api_key": "",
+    "api_secret": ""
+  },
   "application": {
     "port": 1111
   }

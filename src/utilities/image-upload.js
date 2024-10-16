@@ -2,11 +2,12 @@ const multer = require("@koa/multer");
 const path = require("path");
 const fs = require("fs");
 const cloudinary = require("cloudinary").v2;
-
+const env = process.env.NODE_ENV || "development";
+const config = require(`../../config/env/${env}.config.json`)
 // cloudenary credencial
-const api_key = 415618629441388;
-const api_secret = "8u8hyhZxTf_IZJTwEoTliE8WavU";
-const cloud_name = "dnnyncotr";
+const api_key = config.Cloudenary_instance.api_key;
+const api_secret = config.Cloudenary_instance.api_secret;
+const cloud_name = config.Cloudenary_instance.cloud_name;
 
 // Initialiese cloud computation
 cloudinary.config({

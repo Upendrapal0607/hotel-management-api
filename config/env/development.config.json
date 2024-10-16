@@ -30,6 +30,12 @@
       "timeout": 2000
     }
   },
+  "Cloudenary_instance" :{
+    "connect": false,
+    "cloud_name": "dnnyncotr",
+    "api_key": "415618629441388",
+    "api_secret": "8u8hyhZxTf_IZJTwEoTliE8WavU"
+  },
   "application": {
     "port": 1111
   },
