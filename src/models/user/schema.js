@@ -1,35 +1,41 @@
 const { Schema } = require("mongoose");
 const constants = require("./constants");
 const { address } = require("./address");
-
 let schema = new Schema(
   {
-    _id: Schema.Types.ObjectId,
     name: {
       type: String,
       required: true,
       minlength: 1,
       maxlength: 50,
     },
+    profile_photo: {
+      type: String,
+    },
     email: {
       type: String,
       required: true,
       unique: true,
     },
-    status: {
-      type: String,
-      required: true,
-      default: constants.status.pending,
-      enum: constants.status.enum,
-    },
+
     password: {
       type: String,
       required: true,
       bcrypt: true,
     },
+    gender: {
+      type: String,
+      required: true,
+      enum: ["male", "female", "other"],
+    },
     address_list: {
-      type: [address],
-      max: 5,
+      type: address,
+      default: {},
+    },
+    status: {
+      type: String,
+      default: constants.status.active,
+      enum: constants.status.enum,
     },
   },
   {
@@ -45,6 +51,4 @@ let schema = new Schema(
 
 schema.plugin(require("mongoose-bcrypt"));
 
-module.exports = {
-  schema,
-};
+module.exports = schema;

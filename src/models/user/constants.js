@@ -1,10 +1,8 @@
 module.exports = {
   status: {
     active: "active",
-    pending: "pending",
-    disabled: "disabled",
-    deleted: "deleted",
-    enum: ["active", "pending", "disabled", "deleted"],
+    block: "block",
+    enum: ["active", "block"],
   },
   address_type: {
     work: "work",

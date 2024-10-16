@@ -1,14 +1,14 @@
 {
   "mongo_instances": {
-    "primary_1": {
-      "connect": false,
-      "db": "ecommerce",
-      "host": "127.0.0.1",
-      "port": "27017",
-      "user": "Upendra Pal",
-      "pass": "1234",
-      "options": "?authSource=ecommerce&authMechanism=SCRAM-SHA-256"
-    }
+     "primary_1": {
+    "connect": false,                             
+    "db": "HotelDB",
+    "host": "127.0.0.1",
+    "port": "27017",
+    "user": "root",        
+    "pass": "admin123",
+    "options": "" 
+  }
   },
   "redis_instances": {
     "redis_1": {
@@ -32,5 +32,9 @@
   },
   "application": {
     "port": 1111
+  },
+  "secrets":{
+    "ACCESS_TOKEN_SECRET" :"access_secret",
+    "REFRESH_TOKEN_SECRET" :"refresh_secret"
   }
 }

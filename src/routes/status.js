@@ -9,4 +9,4 @@ r.get("/", async ctx => {
     }
 })
 
-module.exports = r
+module.exports = r;

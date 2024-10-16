@@ -1,32 +1,35 @@
 const { Schema } = require("mongoose");
-const constants = require("./constants");
-const bcryptPlugin = require("mongoose-bcrypt");
-
 let schema = new Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      minlength: 1,
-      maxlength: 50,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-      bcrypt: true,
-    },
-    gender: {
+    // _id: Schema.Types.ObjectId,
+    user_Id: {
       type: String,
       required: true,
     },
+    hotel_Id: {
+      type: String,
+      required: true,
+    },
+    booking_status: {
+      type: String,
+      required: true,
+      enum: ["Cancelled", "Completed", "Booked"],
+    },
+    from_date: {
+      type: Date,
+      required: true,
+    },
+    to_date: {
+      type: Date,
+      required: true,
+    },
+    selectedRoom: {
+      type: [],
+      required: true,
+    }
   },
   {
-    collection: "Admin",
+    collection: "Booking",
     timestamps: {
       createdAt: "created",
       updatedAt: "modified",
@@ -35,7 +38,5 @@ let schema = new Schema(
     versionKey: false,
   }
 );
-
-schema.plugin(bcryptPlugin);
 
 module.exports = schema;
